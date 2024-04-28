@@ -2,12 +2,12 @@
 
 <ul>
     <li>
-        <a href="/">Principal</a>
+        <a href="{{ Route('site.index') }}">Principal</a>
     </li>
     <li>
-        <a href="/sobre-nos">Sobre nós</a>
+        <a href="{{ Route('site.sobrenos') }}">Sobre nós</a>
     </li>
     <li>
-        <a href="/contato">Contato</a>
+        <a href="{{ Route('site.contato') }}">Contato</a>
     </li>
 </ul>
