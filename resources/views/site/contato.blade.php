@@ -3,13 +3,13 @@
 
     <ul>
         <li>
-            <a href="{{ Route('site.index') }}">Principal</a>
+            <a href="{{ route('site.index') }}">Principal</a>
         </li>
         <li>
-            <a href="{{ Route('site.sobrenos') }}">Sobre nós</a>
+            <a href="{{ route('site.sobrenos') }}">Sobre nós</a>
         </li>
         <li>
-            <a href="{{ Route('site.contato') }}">Contato</a>
+            <a href="{{ route('site.contato') }}">Contato</a>
         </li>
     </ul>
 </div>
