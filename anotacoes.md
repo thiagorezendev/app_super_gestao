@@ -483,7 +483,25 @@ Console interativo do Laravel onde se tem acesso as classes do projeto, pode ser
 
 ## Formulários
 
+Recuperando dados utilizando o objeto $request. Através do controller, podemos acessar os dados enviados pelo formulário utilizando o método `$request->input('nome_do_campo')`. Também é possível validar os dados recebidos utilizando o método `$request->validate()`, que aceita um array de regras de validação.
 
+**Método input():** Recupera o valor de um campo específico do formulário.
+
+**Método validate():** Valida os dados do formulário de acordo com as regras especificadas.
+
+**Exemplo de uso:**
+
+```php
+public function store(Request $request)
+{
+    $validatedData = $request->validate([
+        'nome' => 'required|max:255',
+        'email' => 'required|email',
+        'mensagem' => 'required',
+    ]);
+
+    // Processa os dados validados
+}
 
 
 
