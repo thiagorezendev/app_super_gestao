@@ -502,6 +502,5 @@ public function store(Request $request)
 
     // Processa os dados validados
 }
-
-
-
+```
+A validação de campos obrigatórios 
