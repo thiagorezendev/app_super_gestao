@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\LogAcessoMiddlaware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -11,7 +12,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            // 'auth' => \App\Http\Middleware\Autheticate::class,
+            'log.acesso' => \App\Http\Middleware\LogAcessoMiddlaware::class
+        ]);
+
+        //adicionando middlaware a todas as rotas sem necessidade de chamar pontualmente em cada
+        // $middleware->append(LogAcessoMiddlaware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
