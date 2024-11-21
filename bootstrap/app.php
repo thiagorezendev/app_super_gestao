@@ -14,7 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             // 'auth' => \App\Http\Middleware\Autheticate::class,
-            'log.acesso' => \App\Http\Middleware\LogAcessoMiddlaware::class
+            'log.acesso' => \App\Http\Middleware\LogAcessoMiddlaware::class,
+            'autenticacao' => \App\Http\Middleware\AutenticacaoMiddleware::class
         ]);
 
         //adicionando middlaware a todas as rotas sem necessidade de chamar pontualmente em cada
