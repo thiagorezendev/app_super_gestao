@@ -19,7 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         //adicionando middlaware a todas as rotas sem necessidade de chamar pontualmente em cada
-        // $middleware->append(LogAcessoMiddlaware::class);
+        $middleware->append(LogAcessoMiddlaware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

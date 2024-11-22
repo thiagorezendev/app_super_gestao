@@ -15,7 +15,7 @@ class AutenticacaoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(true){
+        if(false){
             return $next($request);
         } else {
             return Response('Sem autenticação! Rota indisponível!!!!');
